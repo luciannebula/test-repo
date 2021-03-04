@@ -1,5 +1,16 @@
 // Write a function that uppercases the first letter of each word
+function upperCaser(word){
+    const firstLetter = word[0];
+                                                        console.log(firstLetter, "<--- first letter");
+    const upperCaseLetter = firstLetter.toUpperCase();
+                                                        console.log(upperCaseLetter, "<--- uppercase letter");
+    const restOfWord = word.slice(1);
+                                                        console.log(restOfWord, "<--- rest of word");
+    return upperCaseLetter + restOfWord;
+}
 
+const upperCased = upperCaser("lucian");
+console.log(upperCased, "<-- we should see Lucian");
 /* 
     Rock Paper Scissors (using functions, conditionals, Math, variables, data type)
     Player VS Computer
@@ -23,31 +34,42 @@
             playGame();
             
 */
-var mychoice = prompt("pick Rock, Paper, Scissors, ");
-
-if (mychoice !== "rock" || mychoice!== "Paper" || mychoice !== "Scissors"){
-    console.log("Wrong choice")
-    prompt("pick Rock, Paper, Scissors, ");
-    console.log("player: "+ mychoice);
+//Player choice
+function getRandomNum(){
+    return Math.floor(Math.random()*4 + 1);
 }
 
-    var computerAI = Math.random();
-    if (computerAI < 0.40) {
-        computerAI = "Rock";
-
-    }
-else if(computerAI <= 0.60) {
-    computerAI = "Paper";
-
-}    
-else {
-    computerAI = "Scissors";
-
+function getAlternateRandomNum(){
+    return Math.floor(Math.random()*4);
 }
-console.log("Computer:" + computerAI);
 
-var compare = function(choice1, choice2){
-    if(choice1 === choice2){
-        console.log("The resultis a tie!")
+function getnum(randomNumber){
+    if(randomNumber() === 1){
+        return "Rock.";
+    } else if(randomNumber() === 2){
+        return "Paper.";
+    } else if(randomNumber() === 3){
+        return "Scissors.";
+  
     }
 }
+
+function alternateGetnum(randomNumber){
+    const fortuneList = ["Rock", "Paper", "Scissors",]
+    return fortuneList[randomNumber];
+}
+
+function formatnum(userName,fortune){
+    return userName + " " + fortune;
+}
+
+function tellMeAnum(userName){
+    const randomNumber = getAlternateRandomNum();
+    const fortune = alternateGetnum(randomNumber);
+    const output = formatnum(userName, fortune);
+    return output;
+}
+
+const mynum = tellMeAnum("lucian");
+
+console.log(mynum);
