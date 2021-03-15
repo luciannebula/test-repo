@@ -54,7 +54,7 @@ reverseArr(numArray)
 function sumNotDiv(array) {
     let sum = 0
     for (let i = 0; i < array.length; i++) {
-        if (array[i] % 3 == 0) {
+        if (array[i] % 3 !== 0) {
             sum = sum + array[i]
 
         }
@@ -66,11 +66,31 @@ console.log(sumNotDiv(numArray))
 
 
 // Use the following array for the questions below (you might need to find examples of "nested loops" using good ol' google):
-
+// Nested loops are.... just that a loop within a loop
 const nestedArr = ['full', 'stack', ['node', 'react'], [], ['redux'], ['html', 'css'], 'sql'];
 
-// 6. Create a function that logs every word that has the letter 'a' in the word in the array and the nested arrays. Return "Done!" at the end.
+const onlystrings = ['full', 'stack', 'node', 'react', 'redux', 'html', 'css', 'sql',]
 
+// 6. Create a function that logs every word that has the letter 'a' in the word in the array and the nested arrays. Return "Done!" at the end.
+function logwordsWithA2(array) {
+    for (let i = 0; i < array.length; i++) {
+        // Thinking about the firdt iteration: When array[0] is a... 'full'
+        for (let j = 0; j < array[i].length; j++) {
+            // Thinking about the first iteration: iterate over that string...'full' [0] (array[j])-> 'f'
+            if (array[i][j] === 'a') {
+                // We want to log ever word.
+                // We want to log every word.
+                console.log(array[i]);
+            }   /* The break keyword jumps us out of our loop so we dont log a word twice that might have more than one letter 'a
+        in it */
+            break;
+        }
+    }
+}
+return 'Done!'
+
+const holdval2 = logwordsWithA(onlystrings);
+console.log(holdval2, "<-- return value");
 // 7. Create a function that logs every word that has a length of 4 in the array and in the nested arrays. Return "Done!" at the end.
 
 // 8. Create a function that logs every word that has the letter 'a' in the word in the array and nested arrays.
