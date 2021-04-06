@@ -5,10 +5,7 @@ const skybluebutton = document.querySelector("#skybluebutton");
 const tealbutton = document.querySelector("#tealbutton");
 
 
-// Extra credit: make the border bigger on the selected circle
-// Extra credit: add a reset button - turns background white
-
-redButton.addEventListener("click", function redScheme () {
+redButton.addEventListener("click", function redScheme() {
     document.querySelector("body").className = "red-scheme";
 })
 
@@ -20,6 +17,8 @@ yellowButton.addEventListener("click",function yellowScheme(){
     document.querySelector("body").className = "yellow-scheme";
 })
 
-tealbutton.addEventListener("click",function tealscheme(){
+tealButton.addEventListener("click",function tealscheme(){
     document.querySelector("body").className = "teal-scheme";
 })
+// Extra credit: make the border bigger on the selected circle
+// Extra credit: add a reset button - turns background white
