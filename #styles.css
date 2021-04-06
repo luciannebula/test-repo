@@ -1,0 +1,47 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#scheme-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#color-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#color-switcher li {
+    cursor: pointer;
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    margin: 8px;
+    border-radius: 16px;
+    border: 2px solid black;
+}
+
+.red-scheme {
+    background-color: red;
+}
+
+.skyblue-scheme {
+    background-color: skyblue;
+}
+
+.teal-scheme {
+    background-color: teal;
+}
+
+.yellow-scheme {
+    background-color: yellow;
+}
