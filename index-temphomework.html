@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+    <body>
+        <header>
+            Temperature Lab 2.0
+        </header>
+        <main>
+            <section>
+                <div id="user-input">
+                    <h1 class="text-center">Convert Temperature</h1>
+                    <div id="choose-unit">
+                        <label>Fahrenheit</label>
+                        <input type="radio" name="unit" checked value="Fahrenheit">
+                        <label>Celsius</label>
+                        <input type="radio" name="unit" value="Celsius">
+                        <label>Kelvin</label>
+                        <input type="radio" name="unit" value="Kelvin">
+                    </div>
+                    <div id="enter-temp">
+                        <input type="text" name="temp" value="" placeholder="Input Temperature">
+                    </div>
+                    <button id="submit">Submit</button>
+                </div>
+
+                <div id="user-output">
+                    <h2>Conversions</h2>
+                    <h3>Fahrenheit <span id="fahrenheit-output">...</span></h3>
+                    <h3>Celsius <span id="celsius-output">...</span></h3>
+                    <h3>Kelvin <span id="kelvin-output">...</span></h3>
+                </div>
+            </section>
+        </main>
+        <footer>
+            Nebula V4
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
+</html>
