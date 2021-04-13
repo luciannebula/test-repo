@@ -16,3 +16,28 @@ function getValues(e){
 }
 
 addListeners(allInputs, getValues);
+
+function solve(){
+   
+//split 0 = A split1 is the operator split2 is B
+    var [A, operator, B] = form.displayResult.value.split(/([-\+*\/])/);
+    if (operator== "+"){
+        form.displayResult.value= +A + +B;  
+    }
+    if (operator=="-"){
+        form.displayResult.value= A-B;
+    }
+    if (operator=="*"){
+        form.displayResult.value= A*B;
+    }
+    if (operator=="/"){
+        form.displayResult.value= A/B; 
+    }
+}
+
+var clearButton= document.querySelector("#clearButton");
+console.log(clearButton)
+
+clearButton.addEventListener("click", function(e){
+    form.displayResult.value="";
+});
