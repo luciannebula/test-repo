@@ -32,6 +32,14 @@
     To do this efficiently you should probably create some sort of plan beforehand. "Timewise, programming is 75–90% 
     planning and 10–25% actually typing code."
 */
+function save() {
+    // we make the object from things that we want to save
+    var save ={
+
+    } 
+
+    
+}
 
 const mrMurk = {
     username: "Demon Slayer",
