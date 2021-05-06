@@ -1,0 +1,5 @@
+#intro-page{
+    display: flex;
+    flex-direction: center;
+    align-items: column;
+}
