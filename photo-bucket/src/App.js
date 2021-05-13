@@ -3,8 +3,7 @@ import './App.css';
 import Greeting from './components/Greeting';
 import Header from './components/Header';
 import Card from './components/Card';
-import { randomPhoto, carList } from './unsplashRequests';
-import { randomPhoto, boatList} from './unsplashrequests';
+import { randomPhoto, carList, boatList } from './unsplashRequests';
 import { ourData } from './fakeApi';
 
 class App extends React.Component {
@@ -14,8 +13,7 @@ class App extends React.Component {
     this.state = {
       info: null,
       randomImg: null,
-      selected: 'cars', 
-      selected: 'boats',
+      selected: 'boats',  
       cars: ourData.cars,
       boats: ourData.boats
     }
@@ -49,7 +47,8 @@ class App extends React.Component {
     console.log(res, "<--- our res")
     console.log(carArray, "<---our new car array");
     this.setState({ 
-      cars: carArray
+      cars: carArray,
+      selected: 'cars'
     });
   }
 
@@ -59,7 +58,8 @@ class App extends React.Component {
     console.log(res, "<--- our res")
     console.log(boatArray, "<---our new boat array");
     this.setState({ 
-      boats: boatArray
+      boats: boatArray,
+      selected: 'boats'
     });
   }
 
